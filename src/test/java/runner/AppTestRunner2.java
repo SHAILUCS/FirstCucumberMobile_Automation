@@ -11,7 +11,7 @@ import io.cucumber.testng.PickleWrapper;
 import io.cucumber.testng.TestNGCucumberRunner;
 import runner.util.BaseTest;
 
-@CucumberOptions(features = { "src/test/resources/feature/app2" }, glue = {
+@CucumberOptions(features = { "src/test/resources/feature/app/device2" }, glue = {
 		"StepDefs" }, tags = "@run", monochrome = true, plugin = { "pretty", "html:target/HtmlReports/report2.html",
 				"json:target/json-cucumber-reports/cukejson2.json",
 				"testng:target/testng-cucumber-reports/cuketestng2.xml" })

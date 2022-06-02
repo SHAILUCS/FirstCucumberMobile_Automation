@@ -2,24 +2,10 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Default suite" guice-stage="DEVELOPMENT" verbose="1" parallel="tests" thread-count="2">
   
-  <test name="App Tests1" >
-  	<parameter name="deviceName" value="sdk_gphone_x86" />
-  	<parameter name="platformVersion" value="11" />
-  	<parameter name="port" value="6664" />
-  	<parameter name="udid" value="emulator-5556" />
+  <test name="Allure report using pure testng" >
     <classes>
-      <class name="StepDefs.util.MyTest1"/>
+      <class name="runner.AllureReportRunner"/>
     </classes>
   </test>
-  
-  <test name="App Tests2" >
-  	<parameter name="deviceName" value="sdk_gphone_x86" />
-  	<parameter name="platformVersion" value="11" />
-  	<parameter name="port" value="6663" />
-  	<parameter name="udid" value="emulator-5554" />
-    <classes>
-      <class name="StepDefs.util.MyTest2"/>
-    </classes>
-  </test> 
-   
+
 </suite> 

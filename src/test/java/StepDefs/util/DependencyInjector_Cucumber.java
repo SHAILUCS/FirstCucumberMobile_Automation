@@ -1,22 +1,13 @@
 package StepDefs.util;
 
-import java.net.URL;
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.util.Prop;
 
 import io.appium.java_client.AppiumDriver;
-import io.appium.java_client.android.AndroidDriver;
-import io.appium.java_client.service.local.AppiumDriverLocalService;
-import io.appium.java_client.service.local.AppiumServiceBuilder;
-import io.github.bonigarcia.wdm.WebDriverManager;
-import or.android.LoginCustomerApp;
+import or.app.android.LoginCustomerApp;
 import or.web.admin.LoginAdmin;
 import or.web.admin.LoginSuperAdmin;
 import or.web.customer.LoginCustomer;
@@ -65,19 +56,19 @@ public class DependencyInjector_Cucumber {
 
 	//TODO Object Repositories objects
 	public LoginCustomerApp getLoginCustomerApp() {
-		return new LoginCustomerApp(getAppiumDriver(), getWait());
+		return new LoginCustomerApp();
 	}
 
 	public LoginAdmin getLoginAdmin() {
-		return new LoginAdmin(getWebDriver(), getWait());
+		return new LoginAdmin();
 	}
 
 	public LoginCustomer getLoginCustomer() {
-		return new LoginCustomer(getWebDriver(), getWait());
+		return new LoginCustomer();
 	}
 
 	public LoginSuperAdmin getLoginSuperAdmin() {
-		return new LoginSuperAdmin(getWebDriver(), getWait());
+		return new LoginSuperAdmin();
 	}
 
 }

@@ -11,7 +11,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidDriver;
-import or.android.LoginCustomerApp;
+import or.app.android.LoginCustomerApp;
 
 public class AmplifyCustomerAppTest {
 
@@ -21,9 +21,10 @@ public class AmplifyCustomerAppTest {
 
 	public static void main(String[] args) {
 		try {
+			
 			openApp();
 
-			new LoginCustomerApp(driver,wait).performLogin("+919967489701", "Amplify@123");
+			new LoginCustomerApp().performLogin("+919967489701", "Amplify@123");
 			// doLogin();
 			// closeApp();
 		} catch (Exception e) {

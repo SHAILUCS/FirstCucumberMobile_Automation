@@ -6,7 +6,7 @@
 	<artifactId>Mobile_Automation</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 
-		<properties>
+	<properties>
 		<io.cucumber.version>7.0.0</io.cucumber.version>
 	</properties>
 
@@ -55,6 +55,12 @@
 			<version>7.0.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>io.qameta.allure</groupId>
+			<artifactId>allure-testng</artifactId>
+			<version>2.18.1</version>
+		</dependency>
+
 
 	</dependencies>
 
@@ -75,7 +81,7 @@
 				</property> </properties> <suiteXmlFiles> <suiteXmlFile>testng.xml</suiteXmlFile> 
 				</suiteXmlFiles> </configuration> </plugin> -->
 
-			<!-- https://ghchirp.tech/466/ -->	
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-failsafe-plugin</artifactId>
@@ -94,7 +100,7 @@
 								<suiteXmlFile>testng_cucumber.xml</suiteXmlFile>
 							</suiteXmlFiles>
 
-							
+
 
 							<!-- UNCOMMENT BELOW LINE - To execute feature files with a single 
 								runner -->
@@ -102,10 +108,7 @@
 
 							<!-- UNCOMMENT BELOW LINE - To execute feature files with multiple 
 								runners -->
-<!-- 							<includes>	
-								<include>**/*Runner.java</include> 
-							</includes>
- -->
+							<!-- <includes> <include>**/*Runner.java</include> </includes> -->
 							<!-- OPTIONAL UNCOMMENT BELOW 6 LINES - To set data provider thread 
 								count value. Default is 10. For executing using parallel or forking -->
 							<properties>

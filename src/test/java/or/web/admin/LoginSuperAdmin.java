@@ -9,12 +9,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.util.Util;
 
+import runner.util.ThreadLocalDriver;
+
 public class LoginSuperAdmin {
 	WebDriverWait wait;
 	WebDriver driver;
-	public LoginSuperAdmin(WebDriver driver, WebDriverWait wait) {
-		this.driver = driver;
-		this.wait = wait;
+	public LoginSuperAdmin() {
+		this.driver = ThreadLocalDriver.getWebDriver();
+		this.wait = ThreadLocalDriver.getWait();
 		PageFactory.initElements(driver, this);
 	}
 	

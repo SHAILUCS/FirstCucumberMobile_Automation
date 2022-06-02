@@ -5,7 +5,7 @@ import io.cucumber.core.options.CucumberProperties;
 import io.cucumber.java.Scenario;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import or.android.LoginCustomerApp;
+import or.app.android.LoginCustomerApp;
 import runner.util.ThreadLocalDriver;
 
 public class AmplifyCustomerAppLogin_StepDef {

@@ -1,4 +1,4 @@
-package or.android;
+package or.app.android;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
@@ -9,15 +9,16 @@ import io.appium.java_client.AppiumDriver;
 import io.appium.java_client.android.AndroidElement;
 import io.appium.java_client.pagefactory.AndroidFindBy;
 import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+import runner.util.ThreadLocalDriver;
 
 public class LoginCustomerApp {
 	
 	private AppiumDriver<WebElement> driver;
 	private WebDriverWait wait;
 	
-	public LoginCustomerApp(AppiumDriver<WebElement> driver, WebDriverWait wait) {
-		this.driver= driver;
-		this.wait = wait;
+	public LoginCustomerApp() {
+		this.driver= ThreadLocalDriver.getAppiumDriver();
+		this.wait = ThreadLocalDriver.getWait();
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
